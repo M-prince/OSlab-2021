@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"remoteAuthority": "wsl+Ubuntu",
+	"settings": {
+		"files.associations": {
+			"types.h": "c",
+			"user.h": "c",
+			"*.inc": "c"
+		}
+	}
+}
