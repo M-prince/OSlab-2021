@@ -712,6 +712,7 @@ proc_num(void)
 }
 
 //Return the number of free file descriptor
+//Reference to kernel\sysfile.c\fdalloc
 uint64
 freefd_num(void)
 {
