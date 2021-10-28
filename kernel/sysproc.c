@@ -100,10 +100,10 @@ sys_uptime(void)
 uint64
 sys_trace(void)
 {
-  int pid;
-  if(argint(0, &pid) < 0)
+  int m;
+  if(argint(0, &m) < 0)
     return -1;
-  myproc()->mask = pid;
+  myproc()->mask = m;
   return 0;  
 }
 
