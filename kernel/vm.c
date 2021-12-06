@@ -505,9 +505,9 @@ copyuvm2kvm(pagetable_t pagetable, pagetable_t kpagetable, uint64 oldsz, uint64 
   oldsz = PGROUNDUP(oldsz);
   for(cur = oldsz; cur < newsz; cur += PGSIZE){
     if ((src = walk(pagetable, cur, 0)) == 0)
-      panic("ukvmcopy: pte not exist");
+      panic("copyuvm2kvm: pte not exist");
     if ((dest = walk(kpagetable, cur, 1)) == 0)
-      panic("ukvmcopy: pte alloc failed");
+      panic("copyuvm2kvm: pte alloc failed");
                      
     uint64 pa = PTE2PA(*src);
     flag = PTE_FLAGS(*src) & (~PTE_U);
