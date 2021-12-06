@@ -149,7 +149,7 @@ freeproc(struct proc *p)
   if(p->trapframe)
     kfree((void*)p->trapframe);
   p->trapframe = 0;
-
+  //free kernel stack
   if(p->kstack){
     pte_t* pte = walk(p->kpagetable, p->kstack, 0);
     if(pte == 0)
